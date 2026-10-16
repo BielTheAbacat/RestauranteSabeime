@@ -15,7 +15,7 @@ const AVALIACAO_PADRAO = "https://search.google.com/local/writereview?placeid=Ch
 // Endereço do seu Worker na Cloudflare (o "porteiro" que guarda os dados na nuvem).
 // Exemplo: "https://sabeime-api.seunome.workers.dev"  (sem barra no final).
 // Deixe vazio ("") para o site funcionar sem nuvem, só com o arquivo dados.json.
-const API = "";
+const API = "https://sabeimeapi.gabrielsantosestrela189.workers.dev";
 const BASE = API.trim().replace(/\/+$/, "");   // tira espaços e barra sobrando no fim do endereço
 let senha = "";       // senha do dono (só fica na memória enquanto o painel está aberto)
 
