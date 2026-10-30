@@ -1,0 +1,16 @@
+# Configuração do Worker do Pix com Mercado Pago (use com: npx wrangler deploy)
+name = "sabeime-pix"
+main = "worker-pix.js"
+compatibility_date = "2024-11-01"
+
+# O MESMO armazenamento (KV) que o Worker do cardápio já usa, para ler os preços
+[[kv_namespaces]]
+binding = "SABEIME"
+id = "COLE_AQUI_O_ID_DO_KV_DO_CARDAPIO"
+
+[vars]
+EMAIL_PAGADOR = "COLE_AQUI_UM_EMAIL_SEU_DIFERENTE_DO_DA_CONTA_DO_MERCADO_PAGO"
+NOME_LOJA = "Restaurante Sabeime"
+# SITE_ORIGIN = "https://seusite.com.br"   # (opcional) só deixa este site usar o Worker
+
+# O Access Token NÃO vai aqui: guarde com  npx wrangler secret put MP_ACCESS_TOKEN
