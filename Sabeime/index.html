@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Restaurante Sabeime | Comida caseira</title>
+  <meta name="description" content="Prato feito e marmita com tempero de casa. Veja o cardápio de hoje e envie o pedido pelo WhatsApp.">
+  <meta name="theme-color" content="#280904">
+  <link rel="icon" href="Logo.png">
+  <!-- Letras do site (se não carregarem, o aparelho usa uma letra parecida) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500..800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- ============ TELA DO CLIENTE ============ -->
+  <div id="telaCliente">
+    <header id="menu">
+      <a href="#inicio" class="menu-marca" aria-label="Sabeime, início"><img id="logoMenu" src="Logo.png" alt="Sabeime"></a>
+      <nav class="menu-links"><a href="#cardapio">Cardápio</a><a href="#sobre">A casa</a></nav>
+      <a href="#pedido" class="bt-grande menu-bt">Fazer pedido</a>
+    </header>
+
+    <!-- Abertura: texto à esquerda, foto e logo à direita -->
+    <section id="inicio" class="hero">
+      <div class="hero-texto">
+        <p class="eyebrow">Comida caseira, feita com amor</p>
+        <h1><span class="lh"><span>Prato feito e marmita,</span></span> <span class="lh"><span>pedido em um minuto.</span></span></h1>
+        <p class="hero-sub">Veja o <strong>cardápio de hoje</strong>, escolha as carnes e mande o pedido já pronto no nosso WhatsApp.</p>
+        <div class="hero-acoes"><a href="#pedido" class="bt-grande">Peça agora</a><a href="#cardapio" class="bt-grande sec">Ver cardápio</a></div>
+      </div>
+      <div class="hero-visual">
+        <span class="disco"></span>
+        <img class="hero-foto" src="Economica.jpg" alt="Marmita com arroz, feijão, frango frito e macarrão (foto ilustrativa)">
+        <img id="logoHero" class="hero-logo" src="Logo.png" alt="Restaurante Sabeime, comida caseira">
+      </div>
+    </section>
+
+    <section id="sobre" class="secao sobre">
+      <h2 class="reveal">A nossa cozinha</h2>
+      <div class="reveal">
+        <p>Aqui o prato é de casa: arroz, feijão, a mistura do dia e o tempero de quem cozinha com carinho.</p>
+        <p>Para o pedido chegar certo, montamos este cardápio. Você escolhe o prato, as carnes do dia, tira o que não quer e envia tudo pronto para o nosso WhatsApp.</p>
+        <ul class="fatos">
+          <li><strong>Pratos e marmitas</strong><span>Prato feito, marmita econômica e marmitas P, M e G.</span></li>
+          <li><strong>Carnes do dia</strong><span>O cardápio muda, e a lista de carnes é atualizada aqui.</span></li>
+          <li><strong>Retirada ou entrega</strong><span>Você escolhe como quer receber.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <section class="faixa-cta">
+      <div><h2>Escolha, toque e o pedido já chega pronto no WhatsApp</h2><p>Sem ligar e sem explicar tudo de novo.</p></div>
+      <a href="#pedido" class="bt-grande claro">Fazer meu pedido</a>
+    </section>
+
+    <main>
+      <section id="cardapio" class="secao">
+        <div class="cab"><h2 class="reveal">Cardápio de hoje</h2><p class="reveal">Confira as carnes do dia e toque no + para montar o pedido.</p></div>
+        <div id="blocoCardapio" class="reveal" hidden><img id="imgCardapio" class="cardapio" alt="Cardápio de hoje"></div>
+        <p id="avisoEsgotado" class="aviso reveal" hidden></p>
+        <p id="semCardapio" class="dica">O cardápio de hoje ainda não foi publicado.</p>
+      </section>
+
+      <section id="pedido" class="secao">
+        <div class="cab"><h2 class="reveal">Monte seu pedido</h2><p class="reveal">Quando terminar, o botão do pedido manda tudo junto num só WhatsApp. Fotos ilustrativas.</p></div>
+        <div id="listaProdutos" class="grade"></div>
+        <div id="bebidas" hidden>
+          <h3 class="sub reveal">Bebidas</h3>
+          <div id="listaBebidas" class="grade"></div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="rodape">
+      <div class="rodape-in">
+        <div><img src="Logo.png" alt="Sabeime" class="rodape-logo"><p class="dica" id="dadosEmpresa"></p></div>
+        <div><h4>No site</h4><a href="#cardapio">Cardápio</a><a href="#pedido">Fazer pedido</a>
+          <a id="linkAvaliacao" href="#" target="_blank" rel="noopener" hidden>Avalie a gente no Google ★</a></div>
+        <div><h4>Informações legais</h4><a href="#privacidade">Política de Privacidade</a><a href="#termos">Termos de Uso</a></div>
+      </div>
+      <p class="direitos"></p>
+      <p class="direitos"><a href="https://instagram.com/no.biel">Feito por <strong>@no.biel</strong></a></p>
+    </footer>
+
+    <button id="barraPedido" class="barra" hidden></button>
+  </div>
+
+  <!-- ============ TEXTOS LEGAIS (#privacidade e #termos) ============ -->
+  <div id="telaLegal" hidden>
+    <header class="topo-legal">
+      <a href="#inicio" class="voltar">← Voltar ao site</a>
+      <nav class="abas"><a href="#privacidade" id="abaPrivacidade">Política de Privacidade</a><a href="#termos" id="abaTermos">Termos de Uso</a></nav>
+    </header>
+    <main class="legal"><article id="conteudoLegal"></article></main>
+    <p class="direitos"></p>
+  </div>
+
+  <dialog id="dlgItem"></dialog>
+  <dialog id="dlgResumo"></dialog>
+
+  <script src="comum.js"></script>
+  <script src="script.js"></script>
+  <script src="legal.js"></script>
+</body>
+</html>
