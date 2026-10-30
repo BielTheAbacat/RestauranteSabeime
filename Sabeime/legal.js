@@ -6,8 +6,8 @@
 const EMPRESA = {
   nome: "Restaurante Sabeime",
   razao: "",      // razão social (se tiver)
-  cnpj: "",       // CNPJ (se tiver)
-  endereco: "",   // endereço do restaurante
+  cnpj: "13665629926",       // CNPJ (se tiver)
+  endereco: "Travessa Riachuelo",   // endereço do restaurante
   email: ""       // e-mail para contato
 };
 const ATUALIZADO_EM = "29 de outubro de 2026";
