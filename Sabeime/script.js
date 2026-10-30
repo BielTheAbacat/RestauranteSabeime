@@ -5,7 +5,7 @@
    ===================================================== */
 
 // Endereço do Worker do Pix (veja worker-pix.js). Deixe vazio ("") para o Pix continuar só combinado no WhatsApp.
-const API_PIX = "";
+const API_PIX = "https://sabeime-pix.gabrielsantosestrela189.workers.dev";
 
 // O que o cliente está montando
 let carrinho = [];    // guarda o pedido do cliente
